@@ -8,8 +8,8 @@ public class Battle {
     Char enemy1;
     Char enemy2;
     Char enemy3;
-    ArrayList playerTeam = new ArrayList<>();
-    ArrayList enemyTeam = new ArrayList<>();
+    ArrayList<Char> playerTeam = new ArrayList<Char>();
+    ArrayList<Char> enemyTeam = new ArrayList<Char>();
 
     public Battle(Char p1, Char p2, Char p3, Char e1, Char e2, Char e3){
         System.out.println("BATTLE START");
@@ -54,15 +54,20 @@ public class Battle {
 
     }
 
+
     public void start(){
         for ( int i = 0; i < playerTeam.size(); i++){
+           Char player =  playerTeam.get(i);
+           if (player.getName() != "empty"){
 
+           }
         }
     }
 
 
 
     public void overview(){
+
 
     }
 }
