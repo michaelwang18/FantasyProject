@@ -8,8 +8,8 @@ public class Battle {
     Char enemy1;
     Char enemy2;
     Char enemy3;
-    ArrayList<Char> playerTeam = new ArrayList<Char>();
-    ArrayList<Char> enemyTeam = new ArrayList<Char>();
+    ArrayList playerTeam = new ArrayList<>();
+    ArrayList enemyTeam = new ArrayList<>();
 
     public Battle(Char p1, Char p2, Char p3, Char e1, Char e2, Char e3){
         System.out.println("BATTLE START");
@@ -27,47 +27,18 @@ public class Battle {
         enemyTeam.add(e3);
 
     }
-    public Battle(Char p1, Char p2,  Char p3, Char e1, Char e2){
-        System.out.println("BATTLE START");
-        player1 = p1;
-        player2 = p2;
-        player3 = p3;
-        playerTeam.add(p1);
-        playerTeam.add(p2);
-        playerTeam.add(p3);
-        enemy1 = e1;
-        enemy2 = e2;
-        enemyTeam.add(e1);
-        enemyTeam.add(e2);
-
-    }
-    public Battle(Char p1, Char p2, Char p3, Char e1){
-        System.out.println("BATTLE START");
-        player1 = p1;
-        player2 = p2;
-        player3 = p3;
-        playerTeam.add(p1);
-        playerTeam.add(p2);
-        playerTeam.add(p3);
-        enemy1 = e1;
-        enemyTeam.add(e1);
-
-    }
-
-
     public void start(){
-        for ( int i = 0; i < playerTeam.size(); i++){
-           Char player =  playerTeam.get(i);
-           if (player.getName() != "empty"){
+        while (enemy1.alive || enemy2.alive || enemy3.alive){
+            player1.turn();
+            player2.turn();
+            player3.turn();
 
-           }
         }
     }
 
 
 
     public void overview(){
-
 
     }
 }

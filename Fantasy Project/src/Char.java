@@ -28,15 +28,13 @@ public class Char {
 
     public Char(){
         name = "empty";
-    } //empty
+    }
 
     public void statChange(int hp, int atk, int def){
         this.health += hp;
         this.attack += atk;
         this.defense += def;
     }
-
-    // public
 
     public void takeDMG(int dmg){
         health = health - (dmg - defense);
@@ -52,7 +50,7 @@ public class Char {
 
     public void addSkills(ArrayList skill){
         allSkills.add(skill);
-        System.out.println(name + " Learnt The Skill: " + skill.get(0) + "!");
+        System.out.println(name + " Learnt The Skill: " + skill.getLast() + "!");
     }
 
     public boolean checkStun(){
